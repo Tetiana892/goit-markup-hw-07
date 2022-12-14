@@ -3,22 +3,26 @@
   padding-bottom: var(--card-set-gap);
 
   background-color: var(--primari-header-color);
+  &-title {
+    display: block;
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
 }
 .about-list.list {
   display: flex;
 }
-.about-title {
-  display: block;
-  margin-bottom: 50px;
 
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
-  text-align: center;
-}
 .about-items {
   position: relative;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .about-box::after {
@@ -45,8 +49,4 @@
 
   color: var(--another-text);
   background: rgba(47, 48, 58, 0.8);
-}
-
-.about-items:not(:last-child) {
-  margin-right: 30px;
 }

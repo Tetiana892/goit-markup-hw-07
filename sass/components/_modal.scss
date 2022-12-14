@@ -41,10 +41,10 @@
   align-items: center;
   justify-content: center;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-close:hover,
-.modal-close:focus {
-  fill: var(--accent-color);
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
 }
 
 .is-hidden {
@@ -80,11 +80,12 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color-bt);
+  }
 }
-.submit-button:hover,
-.submit-button:focus {
-  background-color: var(--accent-color-bt);
-}
+
 .modal-submit-button {
   display: flex;
   justify-content: center;
@@ -99,6 +100,17 @@
   color: var(--second-text);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    border-color: var(--accent-color);
+    outline: transparent;
+    cursor: pointer;
+    &:focus + svg,
+    &:hover + svg {
+      fill: var(--accent-color);
+      cursor: pointer;
+    }
+  }
 }
 .modal-label {
   font-weight: 400;
@@ -111,7 +123,9 @@
 }
 .modal-input-group {
   margin-bottom: 20px;
+  position: relative;
 }
+
 .modal-input-group label {
   display: block;
   margin-bottom: 4px;
@@ -132,15 +146,15 @@
   resize: none;
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+  }
 }
 
-.modal-text::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-}
-.modal-text:hover,
-.modal-text:focus {
-  border-color: var(--accent-color);
-}
 .agreement {
   display: flex;
   margin-left: 5px;
@@ -154,6 +168,10 @@
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 30px;
+  &:focus {
+    outline: transparent;
+    border-color: var(--accent-color);
+  }
 }
 .modal-terms {
   display: flex;
@@ -162,48 +180,32 @@
   letter-spacing: 0.03em;
   color: var(--second-text);
   align-items: center;
+  &::before {
+    content: "";
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--light-text);
+    border-radius: 2px;
+    margin-right: 8px;
+  }
 }
-.modal-terms::before {
-  content: "";
-  width: 16px;
-  height: 15px;
-  border: 2px solid var(--light-text);
-  border-radius: 2px;
-  margin-right: 8px;
-}
+
 .modal-input-icon {
   position: absolute;
   top: 50%;
   left: 15px;
   transform: translateY(32%);
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+    cursor: pointer;
+  }
 }
-.modal-input-icon:hover,
-.modal-input-icon:focus {
-  fill: var(--accent-color);
-  cursor: pointer;
-}
-.modal-input-group {
-  position: relative;
-}
-.modal-input:focus,
-.modal-input:hover {
-  border-color: var(--accent-color);
-  outline: transparent;
-  cursor: pointer;
-}
-.modal-input:focus + svg,
-.modal-input:hover + svg {
-  fill: var(--accent-color);
-  cursor: pointer;
-}
+
 .modal-terms-check:checked + label::before {
   border: none;
   background-image: url(../img/checked.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-color: var(--accent-color);
-}
-.modal-checkbox:focus {
-  outline: transparent;
-  border-color: var(--accent-color);
 }

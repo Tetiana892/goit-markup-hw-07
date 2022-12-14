@@ -41,14 +41,14 @@
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
 .footer-address.link {
   margin-top: 20px;
-}
-.footer-item.link:hover,
-.footer-item.link:focus {
-  color: var(--accent-color);
 }
 
 .footer-items-addres.link:hover,
@@ -74,14 +74,15 @@
 .footer-soc-items {
   width: 44px;
   height: 44px;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
 }
 .footer-join.list {
   display: flex;
   width: 206px;
 }
-.footer-soc-items:not(:last-child) {
-  margin-right: 10px;
-}
+
 .footer-soc-link {
   display: flex;
   justify-content: center;
@@ -93,15 +94,15 @@
   background-color: rgba(225, 225, 225, 0.1);
   color: var(--another-text);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
 }
 .footer-soc-icons {
   fill: currentColor;
 }
 
-.footer-soc-link:hover,
-.footer-soc-link:focus {
-  background-color: var(--accent-color);
-}
 .foooter-form {
   display: flex;
   align-items: flex-end;
@@ -135,22 +136,22 @@
   color: rgba(255, 255, 255, 0.6);
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.footer-input:hover,
-.footer-input:focus {
-  border-color: var(--accent-color);
-}
-.footer-input::placeholder {
-  font-family: inherit;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: calc(20 / 16);
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+  }
+  &::placeholder {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(20 / 16);
 
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+  }
 }
 
 .submit-btn {
@@ -170,6 +171,11 @@
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   transition: background-color color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background: var(--accent-color);
+    color: var(--another-text);
+  }
 }
 
 .submint-text {
@@ -180,9 +186,4 @@
   font-size: 16px;
   line-height: calc(30 / 16);
   letter-spacing: 0.06em;
-}
-.submit-btn:hover,
-.submit-btn:focus {
-  background: var(--accent-color);
-  color: var(--another-text);
 }
