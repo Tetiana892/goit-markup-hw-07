@@ -24,18 +24,16 @@
   height: 120px;
   background-color: var(--comand-header-color);
   border-radius: 4px;
-}
-
-.terms-icon-items:not(:last-child) {
-  margin-right: 30px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .terms-list.list {
   flex-basis: calc((100% - 90px) / 4);
-}
-
-.terms-list.list:not(:last-child) {
-  margin-right: 30px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .terms-title {

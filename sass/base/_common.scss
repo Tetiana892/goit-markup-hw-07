@@ -1,0 +1,27 @@
+body {
+  font-family: Roboto, sens-serif;
+  background-color: var(--primari-header-color);
+  color: var(--light-text);
+}
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

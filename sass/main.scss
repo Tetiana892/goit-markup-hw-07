@@ -1,4 +1,6 @@
 @import "./utils/variables";
+@import "./base/reset";
+@import "./base/common";
 @import "./components/page";
 @import "./components/btn";
 @import "./components/header";
@@ -7,6 +9,7 @@
 @import "./components/terms";
 @import "./components/about";
 @import "./components/comand";
+@import "./components/icons";
 @import "./components/clients";
 @import "./components/work";
 @import "./components/footer";
