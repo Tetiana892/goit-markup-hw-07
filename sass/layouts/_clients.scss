@@ -3,6 +3,7 @@
   padding-top: var(--card-set-gap);
 
   background-color: var(--primari-header-color);
+
   &-title {
     display: block;
     margin-bottom: 50px;
@@ -15,9 +16,7 @@
   }
 }
 .clients-list.list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %flex-aling-justify;
 }
 
 .clients-items {

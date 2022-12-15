@@ -5,32 +5,30 @@
   background-color: var(--primari-header-color);
 }
 
-.terms.list {
-  display: flex;
-}
-.terms-icon-list.list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.terms-icon-list {
+  @extend %flex-aling-justify;
 }
 
 .terms-icon-items {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %flex-aling-justify;
   margin-bottom: 30px;
 
   width: 270px;
   height: 120px;
   background-color: var(--comand-header-color);
   border-radius: 4px;
+
   &:not(:last-child) {
     margin-right: 30px;
   }
 }
 
+.terms.list {
+  display: flex;
+}
 .terms-list.list {
   flex-basis: calc((100% - 90px) / 4);
+
   &:not(:last-child) {
     margin-right: 30px;
   }

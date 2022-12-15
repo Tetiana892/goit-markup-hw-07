@@ -3,6 +3,7 @@
   padding-bottom: var(--card-set-gap);
 
   background-color: var(--primari-header-color);
+
   &-title {
     display: block;
     margin-bottom: 50px;
@@ -20,6 +21,7 @@
 
 .about-items {
   position: relative;
+
   &:not(:last-child) {
     margin-right: 30px;
   }

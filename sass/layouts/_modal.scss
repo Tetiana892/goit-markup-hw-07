@@ -29,6 +29,8 @@
   border-radius: 50%;
 }
 .modal-close {
+  @extend %flex-aling-justify;
+
   width: 30px;
   height: 30px;
   background-color: var(--primari-header-color);
@@ -37,9 +39,7 @@
   position: absolute;
   top: 8px;
   right: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
@@ -70,8 +70,7 @@
   font-size: 16px;
   line-height: calc(30 / 16);
 
-  display: flex;
-  align-items: center;
+  @extend %flex-aling;
   text-align: center;
   letter-spacing: 0.06em;
 
@@ -80,6 +79,7 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   &:hover,
   &:focus {
     background-color: var(--accent-color-bt);
@@ -100,11 +100,13 @@
   color: var(--second-text);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   &:focus,
   &:hover {
     border-color: var(--accent-color);
     outline: transparent;
     cursor: pointer;
+
     &:focus + svg,
     &:hover + svg {
       fill: var(--accent-color);
@@ -146,6 +148,7 @@
   resize: none;
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   &::placeholder {
     color: rgba(117, 117, 117, 0.5);
   }
@@ -168,18 +171,19 @@
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 30px;
+
   &:focus {
     outline: transparent;
     border-color: var(--accent-color);
   }
 }
 .modal-terms {
-  display: flex;
+  @extend %flex-aling;
   font-size: 14px;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
   color: var(--second-text);
-  align-items: center;
+
   &::before {
     content: "";
     width: 16px;
@@ -195,6 +199,7 @@
   top: 50%;
   left: 15px;
   transform: translateY(32%);
+
   &:hover,
   &:focus {
     fill: var(--accent-color);

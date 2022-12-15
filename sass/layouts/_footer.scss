@@ -14,24 +14,28 @@
   justify-content: space-between;
 }
 
-.footer-items.list {
+.address__mail.list {
   font-style: normal;
   margin-top: 9px;
 }
 
-.footer-items-addres.list {
+.addres__list.list {
   font-style: normal;
 }
 
-.footer-items-addres.link {
+.addres__link.link {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--another-text);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
-.footer-item.link {
+.address__href.link {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -43,13 +47,8 @@
   }
 }
 
-.footer-address.link {
+.address.link {
   margin-top: 20px;
-}
-
-.footer-items-addres.link:hover,
-.footer-items-addres.link:focus {
-  color: var(--accent-color);
 }
 
 .footer-title {
@@ -63,32 +62,17 @@
   text-transform: uppercase;
   color: var(--another-text);
 }
-.footer-soc-list {
-  display: flex;
-}
 
-.footer-soc-items {
-  width: 44px;
-  height: 44px;
-  &:not(:last-child) {
-    margin-right: 10px;
-  }
-}
-.footer-join.list {
-  display: flex;
-  width: 206px;
-}
-
-.foooter-form {
+.form {
   display: flex;
   align-items: flex-end;
 }
 
-.footer-action {
+.form__action {
   margin-right: 12px;
 }
 
-.label-title {
+.form__label {
   display: block;
   margin-bottom: 20px;
 
@@ -100,7 +84,7 @@
 
   color: var(--primari-header-color);
 }
-.footer-input {
+.form-input {
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 16px;
@@ -123,15 +107,14 @@
     font-size: 16px;
     line-height: calc(20 / 16);
 
-    display: flex;
-    align-items: center;
+    @extend %flex-aling;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
   }
 }
 
-.submit-btn {
-  display: flex;
+.submit__btn {
+  @extend %flex-aling;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 28px;
@@ -139,7 +122,6 @@
   width: 200px;
   height: 50px;
 
-  align-items: center;
   text-align: center;
 
   color: var(--another-text);
@@ -154,7 +136,7 @@
   }
 }
 
-.submint-text {
+.submint__text {
   margin-right: 10px;
   font-family: inherit;
   font-style: normal;
